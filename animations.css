@@ -1,0 +1,116 @@
+/* ===================================================
+   KEYFRAMES & MOTION ANIMATIONS - MAGIC FOREST BIO
+   =================================================== */
+
+/* Viền phát sáng xoay tròn hào quang Avatar (Aura Glow) */
+@keyframes auraRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes avatarPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 25px var(--glow-color), 0 0 50px var(--primary-color-20);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px var(--glow-color), 0 0 70px var(--primary-color-40);
+  }
+}
+
+/* Đôi tai mèo phát sáng công nghệ (Cat Ear Glow) */
+@keyframes earTwitch {
+  0%, 90%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  92% {
+    transform: scale(1.1) rotate(-4deg);
+  }
+  94% {
+    transform: scale(1.1) rotate(4deg);
+  }
+  96% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Sóng nhạc phát triển Visualizer */
+@keyframes soundWave {
+  0%, 100% {
+    height: 4px;
+    opacity: 0.6;
+  }
+  50% {
+    height: 22px;
+    opacity: 1;
+  }
+}
+
+/* Chữ chạy Marquee mượt mà cho bài hát */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Con trỏ gõ chữ nhấp nháy */
+@keyframes blinkCursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hạt nổ lấp lánh khi sao chép thành công */
+@keyframes sparkleBurstAnim {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0);
+    opacity: 0;
+  }
+}
+
+.sparkle-particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffea79;
+  box-shadow: 0 0 8px #ffea79, 0 0 16px #ff77aa;
+  pointer-events: none;
+  z-index: 9999;
+  animation: sparkleBurstAnim 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Nút thông báo nhắc bấm nghe nhạc rung rinh thu hút */
+@keyframes bounceFloating {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+/* Đĩa xoay hoặc icon chơi nhạc */
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

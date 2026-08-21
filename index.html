@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="magic-forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Nguyễn Minh Thắng | Bio Link & Portfolio Cá Nhân</title>
+  <meta name="description" content="Portfolio cá nhân của Nguyễn Minh Thắng - Developer, Freelancer. Kết nối mạng xã hội, thông tin thanh toán ngân hàng và thưởng thức âm nhạc.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NỀN VIDEO TIKTOK CHUYỂN ĐỘNG & CANVAS KỲ ẢO (TỰ ĐỘNG THÍCH ỨNG DỌC TRÊN ĐIỆN THOẠI & TRẢI RỘNG TRÊN MÁY TÍNH) -->
+  <div class="background-wrapper">
+    <video id="bg-video" autoplay loop muted playsinline src="assets/video/bg_video.mp4"></video>
+    <div class="bg-dark-overlay"></div>
+    <canvas id="forest-canvas"></canvas>
+  </div>
+
+  <!-- NÚT NHẮC BẬT NHẠC NHANH (Tự biến mất sau khi chạm) -->
+  <div class="quick-notice-pill" id="quick-play-notice">
+    <i class="fa-solid fa-music"></i>
+    <span>Chạm để bật nhạc "Lạc Vào Khu Rừng Hoa" 🌸</span>
+  </div>
+
+  <!-- CONTAINER CHÍNH (GLASSMORPHISM & NEUMORPHISM 3D) -->
+  <main class="portfolio-container" id="main-card">
+
+    <!-- CỘT TRÁI (DESKTOP) / PHẦN TRÊN (MOBILE) -->
+    <div class="desktop-col-left">
+
+      <!-- TOP STATUS BAR: FPS & THEME CHANGER -->
+      <div class="top-status-bar">
+        <div class="fps-badge" title="Tỷ lệ khung hình chuyển động thực tế">
+          <span class="fps-dot"></span>
+          <span>FPS: <strong id="fps-val">60</strong></span>
+        </div>
+
+        <div class="controls-right">
+          <!-- Đồng hồ thời gian thực -->
+          <div class="fps-badge" style="display: none;" id="clock-badge">
+            <span id="live-clock">00:00:00</span>
+          </div>
+
+          <!-- Nút đổi màu giao diện (Themes) -->
+          <button class="icon-control-btn" id="theme-toggle-btn" title="Đổi màu sắc giao diện" aria-label="Đổi màu sắc">
+            <i class="fa-solid fa-palette" id="theme-icon"></i>
+          </button>
+
+          <!-- Dropdown danh sách Themes -->
+          <div class="theme-dropdown" id="theme-dropdown-menu"></div>
+        </div>
+      </div>
+
+      <!-- AVATAR PHONG CÁCH HOẠT HỌA VỚI TAI MÈO & HÀO QUANG PHÁT SÁNG -->
+      <section class="profile-section">
+        <div class="avatar-wrapper">
+          <!-- Tai mèo phát sáng trên đỉnh Avatar -->
+          <div class="cat-ears-neon">
+            <div class="ear-left"></div>
+            <div class="ear-right"></div>
+          </div>
+
+          <!-- Vòng hào quang xoay tròn đa sắc -->
+          <div class="avatar-ring"></div>
+
+          <!-- Khung ảnh chính -->
+          <div class="avatar-inner">
+            <img src="assets/avatar.jpg" 
+                 alt="Avatar Nguyễn Minh Thắng" 
+                 class="avatar-img" 
+                 id="profile-avatar">
+          </div>
+
+          <!-- Chấm trạng thái Online xanh ngọc -->
+          <div class="status-badge-dot" title="Đang trực tuyến"></div>
+        </div>
+
+        <!-- HỌ TÊN & CHỨC DANH GÕ CHỮ ĐỘNG -->
+        <h1 class="profile-name" id="profile-name">Nguyễn Minh Thắng</h1>
+        
+        <div class="profile-bio">
+          <span id="profile-bio">Developer | Freelancer | </span>
+          <span class="typing-container">
+            <span id="typing-text"></span>
+            <span class="cursor-blink"></span>
+          </span>
+        </div>
+      </section>
+
+      <!-- HÀNG ICON MẠNG XÃ HỘI 3D NEUMORPHISM -->
+      <nav class="socials-row" id="socials-container" aria-label="Liên kết mạng xã hội"></nav>
+
+    </div>
+
+    <!-- CỘT PHẢI (DESKTOP) / PHẦN DƯỚI (MOBILE) -->
+    <div class="desktop-col-right">
+
+      <!-- TRÌNH PHÁT NHẠC "LẠC VÀO KHU RỪNG HOA" -->
+      <section class="music-player-card" aria-label="Trình phát nhạc">
+        <div class="music-header" id="music-header-box">
+          <div class="disc-art" id="disc-art">
+            <i class="fa-solid fa-compact-disc"></i>
+          </div>
+          <div class="song-info">
+            <div class="song-title-marquee" id="song-title">Lạc Vào Khu Rừng Hoa</div>
+            <div class="song-subtitle" id="song-subtitle">Duongg (Nắng Ấm Trong Tim)</div>
+          </div>
+          <!-- Canvas sóng âm thanh Visualizer nhảy theo nhạc -->
+          <canvas id="music-visualizer" width="60" height="24"></canvas>
+        </div>
+
+        <!-- BỘ ĐIỀU KHIỂN & THANH TUA TIẾN TRÌNH -->
+        <div class="music-controls-row">
+          <button class="play-toggle-btn" id="play-btn" aria-label="Phát hoặc tạm dừng nhạc">
+            <i class="fa-solid fa-play" id="play-icon"></i>
+          </button>
+
+          <div class="time-progress-wrap">
+            <span class="time-badge" id="current-time">00.00</span>
+            <div class="progress-track" id="progress-container" title="Bấm vào để tua bài hát">
+              <div class="progress-fill" id="progress-bar"></div>
+            </div>
+            <span class="time-badge" id="duration-time">03.34</span>
+          </div>
+
+          <button class="player-extra-btn active" id="loop-btn" title="Lặp lại bài hát" aria-label="Lặp lại">
+            <i class="fa-solid fa-repeat"></i>
+          </button>
+
+          <button class="player-extra-btn" id="shuffle-btn" title="Phát ngẫu nhiên" aria-label="Phát ngẫu nhiên">
+            <i class="fa-solid fa-shuffle"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- DANH SÁCH THẺ NGÂN HÀNG & LIÊN HỆ (SAO CHÉP 1 CHẠM) -->
+      <section class="banking-section" id="banking-container" aria-label="Thông tin ngân hàng và thanh toán"></section>
+
+    </div>
+
+  </main>
+
+  <!-- MODAL XEM MÃ VIETQR CHUYỂN KHOẢN NHANH -->
+  <div class="modal-overlay" id="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="close-qr-modal" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+      <h3 class="modal-title" id="qr-modal-title">Mã QR Thanh Toán</h3>
+      <p class="qr-desc-info" id="qr-bank-name">MB BANK</p>
+      
+      <div class="qr-frame">
+        <img src="" alt="Mã QR thanh toán ngân hàng" class="qr-img" id="qr-image-display">
+      </div>
+
+      <div class="qr-desc-info">
+        Số tài khoản: <strong id="qr-acc-num" style="color: var(--primary-color);">0919095172</strong><br>
+        Chủ tài khoản: <strong id="qr-acc-holder">NGUYEN MINH THANG</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/data.js?v=2.1"></script>
+  <script src="js/canvas-bg.js?v=2.1"></script>
+  <script src="js/music.js?v=2.1"></script>
+  <script src="js/app.js?v=2.1"></script>
+</body>
+</html>
