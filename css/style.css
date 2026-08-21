@@ -1,0 +1,1044 @@
+/* ===================================================
+   PORTFOLIO BIO LINK - DESIGN SYSTEM & THEMES
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Default Theme: Rừng Hoa Kỳ Ảo (Magic Forest) */
+  --primary-color: #ff77aa;
+  --primary-color-40: rgba(255, 119, 170, 0.4);
+  --primary-color-20: rgba(255, 119, 170, 0.2);
+  --secondary-color: #00f2fe;
+  --accent-color: #a777e3;
+  --bg-gradient-start: #0c0e1f;
+  --bg-gradient-end: #070913;
+  --card-bg: rgba(12, 16, 32, 0.28); /* Trong suốt cao nhìn thấu nền video */
+  --card-inner-bg: rgba(255, 255, 255, 0.04);
+  --card-inner-hover: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 119, 170, 0.32);
+  --card-border-glow: rgba(0, 242, 254, 0.4);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-sub: rgba(255, 255, 255, 0.65);
+  --glow-color: rgba(255, 119, 170, 0.35);
+  --btn-neu-bg: rgba(255, 255, 255, 0.06);
+  --btn-neu-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  --radius-xl: 32px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Theme 2: Cyberpunk Neon */
+[data-theme="cyber-neon"] {
+  --primary-color: #00ffcc;
+  --primary-color-40: rgba(0, 255, 204, 0.4);
+  --primary-color-20: rgba(0, 255, 204, 0.2);
+  --secondary-color: #ff007f;
+  --accent-color: #7928ca;
+  --card-bg: rgba(8, 12, 24, 0.32);
+  --card-inner-bg: rgba(0, 255, 204, 0.04);
+  --card-inner-hover: rgba(0, 255, 204, 0.1);
+  --card-border: rgba(0, 255, 204, 0.35);
+  --card-border-glow: rgba(255, 0, 127, 0.4);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-sub: rgba(0, 255, 204, 0.7);
+  --glow-color: rgba(0, 255, 204, 0.35);
+}
+
+/* Theme 3: Aurora Dream */
+[data-theme="aurora-dream"] {
+  --primary-color: #d946ef;
+  --primary-color-40: rgba(217, 70, 239, 0.4);
+  --primary-color-20: rgba(217, 70, 239, 0.2);
+  --secondary-color: #6366f1;
+  --accent-color: #38bdf8;
+  --card-bg: rgba(18, 14, 38, 0.3);
+  --card-inner-bg: rgba(217, 70, 239, 0.05);
+  --card-inner-hover: rgba(99, 102, 241, 0.12);
+  --card-border: rgba(217, 70, 239, 0.35);
+  --card-border-glow: rgba(56, 189, 248, 0.4);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-sub: rgba(217, 70, 239, 0.7);
+  --glow-color: rgba(217, 70, 239, 0.35);
+}
+
+/* Theme 4: Sunset Gold */
+[data-theme="sunset-gold"] {
+  --primary-color: #f59e0b;
+  --primary-color-40: rgba(245, 158, 11, 0.4);
+  --primary-color-20: rgba(245, 158, 11, 0.2);
+  --secondary-color: #ef4444;
+  --accent-color: #ec4899;
+  --card-bg: rgba(24, 14, 18, 0.32);
+  --card-inner-bg: rgba(245, 158, 11, 0.05);
+  --card-inner-hover: rgba(239, 68, 68, 0.12);
+  --card-border: rgba(245, 158, 11, 0.35);
+  --card-border-glow: rgba(236, 72, 153, 0.4);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-sub: rgba(245, 158, 11, 0.7);
+  --glow-color: rgba(245, 158, 11, 0.35);
+}
+
+/* Theme 5: Soft Neumorphic (Sáng Tinh Khôi) */
+[data-theme="soft-neumorphic"] {
+  --primary-color: #4f46e5;
+  --primary-color-40: rgba(79, 70, 229, 0.3);
+  --primary-color-20: rgba(79, 70, 229, 0.15);
+  --secondary-color: #06b6d4;
+  --accent-color: #8b5cf6;
+  --card-bg: rgba(245, 248, 255, 0.45);
+  --card-inner-bg: rgba(255, 255, 255, 0.4);
+  --card-inner-hover: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(255, 255, 255, 0.75);
+  --card-border-glow: rgba(79, 70, 229, 0.2);
+  --text-main: #1e293b;
+  --text-muted: #334155;
+  --text-sub: #475569;
+  --glow-color: rgba(79, 70, 229, 0.15);
+  --btn-neu-bg: rgba(255, 255, 255, 0.5);
+  --btn-neu-shadow: 4px 4px 12px rgba(166, 175, 195, 0.35), -4px -4px 12px rgba(255, 255, 255, 0.7);
+}
+
+/* Theme 6: Chế Độ Trong Suốt (Transparent Glass) */
+[data-theme="transparent-glass"] {
+  --primary-color: #38bdf8;
+  --primary-color-40: rgba(56, 189, 248, 0.4);
+  --primary-color-20: rgba(56, 189, 248, 0.2);
+  --secondary-color: #ec4899;
+  --accent-color: #a855f7;
+  --card-bg: transparent;
+  --card-inner-bg: rgba(255, 255, 255, 0.08);
+  --card-inner-hover: rgba(255, 255, 255, 0.16);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --card-border-glow: rgba(56, 189, 248, 0.35);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.9);
+  --text-sub: rgba(255, 255, 255, 0.75);
+  --glow-color: rgba(56, 189, 248, 0.35);
+  --btn-neu-bg: rgba(255, 255, 255, 0.1);
+  --btn-neu-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="transparent-glass"] .portfolio-container {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+[data-theme="transparent-glass"] .desktop-col-left {
+  border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-theme="transparent-glass"] .music-player-card,
+[data-theme="transparent-glass"] .bank-card {
+  background: rgba(10, 15, 30, 0.42) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="transparent-glass"] .theme-dropdown {
+  background: rgba(12, 16, 32, 0.92) !important;
+  backdrop-filter: blur(25px) !important;
+  -webkit-backdrop-filter: blur(25px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: #0c0e1f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+  padding: 24px 16px;
+  user-select: none;
+}
+
+/* Background Layers */
+.background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background-color: #0c0e1f;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.92) contrast(1.06) saturate(1.15);
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.bg-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(12, 16, 32, 0.12) 0%, rgba(7, 9, 19, 0.45) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+#forest-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* Main Container Layout */
+.portfolio-container {
+  width: 100%;
+  max-width: 440px; /* Mặc định dọc trên Mobile */
+  background: var(--card-bg);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35), 0 0 25px var(--glow-color);
+  padding: 28px 24px;
+  position: relative;
+  z-index: 10;
+  transition: var(--transition-smooth);
+}
+
+/* ===================================================
+   DESKTOP / LAPTOP WIDESCREEN RESPONSIVE EXPANSION (Ngang)
+   =================================================== */
+@media (min-width: 860px) {
+  .portfolio-container {
+    max-width: 960px;
+    padding: 36px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .desktop-col-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid var(--card-border);
+    padding-right: 32px;
+  }
+
+  .desktop-col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Top Floating Bar: FPS & Theme Controls */
+.top-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.fps-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-inner-bg);
+  border: 1px solid var(--card-border);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.fps-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.icon-control-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--card-inner-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+}
+
+.icon-control-btn:hover {
+  background: var(--primary-color-20);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* Theme Selector Dropdown */
+.theme-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 190px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition-smooth);
+  z-index: 100;
+}
+
+.theme-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-align: left;
+}
+
+.theme-option:hover, .theme-option.active {
+  background: var(--card-inner-hover);
+  color: var(--primary-color);
+}
+
+.theme-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ===================================================
+   PROFILE HEADER & AVATAR (Có viền & tai mèo phát sáng)
+   =================================================== */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 22px;
+  width: 100%;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tai mèo phát sáng trên đỉnh Avatar */
+.cat-ears-neon {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 28px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 5;
+  animation: earTwitch 6s infinite ease-in-out;
+}
+
+.ear-left, .ear-right {
+  width: 24px;
+  height: 24px;
+  border-top: 3px solid var(--primary-color);
+  box-shadow: 0 0 12px var(--primary-color), inset 0 0 6px var(--primary-color-40);
+  background: rgba(255, 119, 170, 0.15);
+}
+
+.ear-left {
+  border-left: 3px solid var(--primary-color);
+  border-top-left-radius: 8px;
+  transform: rotate(-15deg) skew(-10deg);
+}
+
+.ear-right {
+  border-right: 3px solid var(--primary-color);
+  border-top-right-radius: 8px;
+  transform: rotate(15deg) skew(10deg);
+}
+
+.avatar-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
+  animation: auraRotate 6s linear infinite;
+  opacity: 0.85;
+  filter: blur(4px);
+}
+
+.avatar-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  box-shadow: 0 0 20px var(--glow-color);
+  background: #1e102f;
+  animation: avatarPulse 4s infinite ease-in-out;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.avatar-inner:hover .avatar-img {
+  transform: scale(1.1);
+}
+
+.status-badge-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  width: 16px;
+  height: 16px;
+  background: #10b981;
+  border: 2.5px solid var(--card-bg);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
+}
+
+/* Tên & Tiểu sử */
+.profile-name {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+  background: linear-gradient(135deg, var(--text-main) 30%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile-bio {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 320px;
+  min-height: 42px;
+}
+
+.typing-container {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: var(--primary-color);
+  margin-left: 2px;
+  animation: blinkCursor 0.8s infinite;
+}
+
+/* ===================================================
+   SOCIAL BUTTONS ROW
+   =================================================== */
+.socials-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  width: 100%;
+}
+
+.social-btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--btn-neu-bg);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 1.25rem;
+  box-shadow: var(--btn-neu-shadow);
+  transition: var(--transition-smooth);
+}
+
+.social-btn:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 10px 20px var(--primary-color-40);
+}
+
+.social-tooltip {
+  position: absolute;
+  bottom: -30px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: var(--transition-smooth);
+}
+
+.social-btn:hover .social-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================================================
+   MUSIC PLAYER CARD (Neumorphic Glass Style)
+   =================================================== */
+.music-player-card {
+  background: var(--card-inner-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.08), 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.music-player-card:hover {
+  background: var(--card-inner-hover);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px var(--primary-color-20);
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.disc-art {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: conic-gradient(#111, #333, #111);
+  border: 2px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 12px var(--glow-color);
+}
+
+.disc-art i {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+}
+
+.music-header.playing .disc-art {
+  animation: spinSlow 5s linear infinite;
+}
+
+.song-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.song-title-marquee {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#music-visualizer {
+  width: 60px;
+  height: 24px;
+}
+
+/* Bộ điều khiển phát nhạc & Seekbar */
+.music-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.play-toggle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 16px var(--primary-color-40);
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.play-toggle-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px var(--glow-color);
+}
+
+.play-toggle-btn.playing {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.time-progress-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.time-badge {
+  font-size: 0.78rem;
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 36px;
+}
+
+.progress-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  border-radius: 10px;
+  box-shadow: 0 0 8px var(--primary-color);
+  transition: width 0.1s linear;
+}
+
+.player-extra-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: var(--transition-smooth);
+}
+
+.player-extra-btn:hover, .player-extra-btn.active {
+  color: var(--primary-color);
+  transform: scale(1.15);
+}
+
+/* ===================================================
+   BANKING & CONTACT CARDS (Sao chép 1 chạm)
+   =================================================== */
+.banking-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.bank-card {
+  background: var(--card-inner-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.06), 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.bank-card:hover {
+  background: var(--card-inner-hover);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.bank-info {
+  flex: 1;
+}
+
+.bank-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.bank-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bank-subtext {
+  font-size: 0.72rem;
+  color: var(--text-sub);
+}
+
+.bank-account-num {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.bank-holder-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.bank-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qr-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-smooth);
+}
+
+.qr-btn:hover {
+  background: var(--secondary-color);
+  color: #000;
+  border-color: #ffffff;
+}
+
+.copy-btn {
+  background: var(--btn-neu-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: var(--btn-neu-shadow);
+  transition: var(--transition-smooth);
+}
+
+.copy-btn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--primary-color-40);
+}
+
+.copy-btn.copied {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 15px #10b981 !important;
+}
+
+/* ===================================================
+   FLOATING QUICK NOTICE (Chạm để nghe nhạc)
+   =================================================== */
+.quick-notice-pill {
+  position: fixed;
+  bottom: 24px;
+  background: rgba(18, 22, 40, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--primary-color);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px var(--primary-color-40);
+  cursor: pointer;
+  z-index: 1000;
+  animation: bounceFloating 3s infinite ease-in-out;
+  transition: var(--transition-smooth);
+}
+
+.quick-notice-pill:hover {
+  transform: scale(1.05);
+  background: var(--primary-color);
+}
+
+/* ===================================================
+   TOAST NOTIFICATION
+   =================================================== */
+.toast-container {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.toast-item {
+  background: rgba(15, 20, 35, 0.92);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--primary-color);
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-color-40);
+  opacity: 0;
+  transform: translateY(-20px) scale(0.9);
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.toast-item.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ===================================================
+   VIETQR MODAL POPUP
+   =================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px var(--glow-color);
+  position: relative;
+  transform: scale(0.9);
+  transition: var(--transition-smooth);
+}
+
+.modal-overlay.active .modal-box {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--text-main);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+}
+
+.modal-close-btn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-main);
+}
+
+.qr-frame {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  margin: 16px 0;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.qr-img {
+  width: 220px;
+  height: 220px;
+  display: block;
+}
+
+.qr-desc-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
